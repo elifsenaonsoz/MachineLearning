@@ -23,26 +23,7 @@ Her iki modelin eğitim süresi, tahmin süresi ve doğruluk oranı analiz edilm
 
 Veri, **%70 eğitim - %30 test** oranında ayrılmıştır.
 
----
 
-## 🚀 Çalıştırma Adımları
-
-Gerekli kütüphaneleri yüklemek için:
-```bash
-pip install -r requirements.txt
-```
-
-Scikit-learn modeli çalıştırmak için:
-```bash
-python bayesWithSklearn.py
-```
-
-Manuel Gaussian Naive Bayes modeli çalıştırmak için:
-```bash
-python manuelBayes.py
-```
-
----
 
 ## 📄 Dosya Açıklamaları
 
@@ -63,15 +44,4 @@ python manuelBayes.py
 | **Scikit-learn GaussianNB** | **%XX.XX** | **X.XXXX**         | **X.XXXX**         |
 | **Custom GaussianNB**       | **%XX.XX** | **X.XXXX**         | **X.XXXX**         |
 
-🔹 **Karmaşıklık Matrisi:**
-Her iki model için aynı sonuçlar elde edilmiştir.
-
----
-
-## 📚 Kaynakça
-- [Scikit-learn Naive Bayes Dokümantasyonu](https://scikit-learn.org/stable/modules/naive_bayes.html)
-- [Makine Öğrenmesi için Veri Setleri](https://archive.ics.uci.edu/ml/datasets.php)
-- [GitHub Git Rehberi](https://github.com/git-guides/#learning-git-basics)
-
-📌 **Hazırlayan:** Elif Güngen - YZM212 Makine Öğrenmesi Projesi
 
