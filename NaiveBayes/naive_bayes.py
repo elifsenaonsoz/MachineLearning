@@ -3,15 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import time
 
-from sklearn.model_selection import train_test_split
-
 df = pd.read_csv(r'C:\Users\Elif\Downloads\archive (25).zip', compression='zip')
 
 for col in df.columns:
     if df[col].dtype in [np.float64, np.int64]:
-        df[col].fillna(df[col].mean(), inplace=True)
+        df[col].fillna(df[col].mean(), inplace=True)  
     else:
-        df[col].fillna(df[col].mode()[0], inplace=True)
+        df[col].fillna(df[col].mode()[0], inplace=True)  
 
 df = pd.get_dummies(df, drop_first=True)
 
@@ -23,7 +21,12 @@ else:
 X = df.drop(columns=[target]).values
 y = df[target].values
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+np.random.seed(42)
+indices = np.random.permutation(len(X))
+split_idx = int(0.7 * len(X))
+train_idx, test_idx = indices[:split_idx], indices[split_idx:]
+X_train, X_test = X[train_idx], X[test_idx]
+y_train, y_test = y[train_idx], y[test_idx]
 
 class CustomGaussianNB:
     def fit(self, X, y):
@@ -33,24 +36,19 @@ class CustomGaussianNB:
         self.priors = {}
         for c in self.classes:
             X_c = X[y == c]
-            self.mean[c] = np.array(X_c.mean(axis=0), dtype=np.float64)
-            self.var[c] = np.array(X_c.var(axis=0), dtype=np.float64)
+            self.mean[c] = np.mean(X_c, axis=0)
+            self.var[c] = np.array(np.var(X_c, axis=0) + 1e-9, dtype=np.float64)  # Hata düzeltilmiş
             self.priors[c] = X_c.shape[0] / X.shape[0]
-            
+
     def predict(self, X):
         preds = []
-        eps = 1e-9  
         for x in X:
             posteriors = {}
             for c in self.classes:
-                mean_c = np.asarray(self.mean[c], dtype=np.float64)
-             
-                var_c = np.maximum(np.asarray(self.var[c], dtype=np.float64), eps)
-                log_prior = np.log(self.priors[c])
-                
-                log_likelihood = np.sum(-0.5 * np.log(2.0 * np.pi * var_c)
-                                          - ((x - mean_c) ** 2) / (2.0 * var_c))
-                posteriors[c] = log_prior + log_likelihood
+                prior = np.log(self.priors[c])
+                likelihood = -0.5 * np.sum(np.log(2.0 * np.pi * np.array(self.var[c], dtype=np.float64))) - \
+                             0.5 * np.sum(((x - self.mean[c]) ** 2) / np.array(self.var[c], dtype=np.float64))
+                posteriors[c] = prior + likelihood
             preds.append(max(posteriors, key=posteriors.get))
         return np.array(preds)
 
@@ -71,7 +69,7 @@ def compute_confusion_matrix(y_true, y_pred):
     return cm
 
 cm_custom = compute_confusion_matrix(y_test, y_pred_custom)
-accuracy_custom = np.sum(y_test == y_pred_custom) / len(y_test)
+accuracy_custom = np.mean(y_test == y_pred_custom)
 
 print("Custom GaussianNB (Manuel Versiyon)")
 print("Eğitim süresi: {:.6f} saniye".format(fit_time))
@@ -95,5 +93,6 @@ for i in range(cm_custom.shape[0]):
         plt.text(j, i, format(cm_custom[i, j], 'd'),
                  ha="center", va="center",
                  color="white" if cm_custom[i, j] > thresh else "black")
+
 plt.tight_layout()
 plt.show()
