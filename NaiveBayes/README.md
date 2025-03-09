@@ -41,13 +41,13 @@ Veri, **%70 eğitim - %30 test** oranında ayrılmıştır.
  [  0  62]]
  
 ###  Custom GaussianNB (Manuel Versiyon)
-- **Doğruluk:** %94.93  
-- **Eğitim Süresi:** 0.002992 saniye  
-- **Tahmin Süresi:** 0.013963 saniye  
+- **Doğruluk:** %95.65  
+- **Eğitim Süresi:** 0.003350 saniye
+- **Tahmin Süresi:** 0.011420 saniye 
 
 **Karmaşıklık Matrisi:**  
-[[200 14] 
- [ 0 62]]
+ [[207  11]
+  [  1  57]]
 
  Sonuç olarak **Scikit-learn modeli hız açısından çok daha avantajlı**, ancak **Custom model hasta sınıflandırmada daha iyi sonuç vermiştir**.
  ## Kaynakça  
