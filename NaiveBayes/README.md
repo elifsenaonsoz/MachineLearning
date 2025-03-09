@@ -31,16 +31,27 @@ Veri, **%70 eğitim - %30 test** oranında ayrılmıştır.
 
 İki modelin karşılaştırması, **eğitim süresi, test süresi, doğruluk oranı ve karmaşıklık matrisi** üzerinden yapılmıştır.
 
-### **1️⃣ Scikit-learn GaussianNB Modeli**
+###  Scikit-learn GaussianNB Modeli
 - **Doğruluk:** %94.20  
 - **Eğitim Süresi:** 0.001916 saniye  
 - **Tahmin Süresi:** 0.000878 saniye  
 
 #### **Karmaşıklık Matrisi:**  
-Actual \ Predicted	0	1
-0	200	14
-1	2	60
-markdown
-Kopyala
-Düzenle
+[[200  14]
+ [  0  62]]
+ 
+###  Custom GaussianNB (Manuel Versiyon)
+- **Doğruluk:** %94.93  
+- **Eğitim Süresi:** 0.002992 saniye  
+- **Tahmin Süresi:** 0.013963 saniye  
+
+**Karmaşıklık Matrisi:**  
+[[200 14] 
+ [ 0 62]]
+
+ Sonuç olarak **Scikit-learn modeli hız açısından çok daha avantajlı**, ancak **Custom model hasta sınıflandırmada daha iyi sonuç vermiştir**.
+ ## Kaynakça  
+
+- **Veri Seti Kaynağı:** [UCI Makine Öğrenmesi Deposu - Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)  
+- **Scikit-learn Naive Bayes Dokümantasyonu:** [Scikit-learn GaussianNB](https://scikit-learn.org/stable/modules/naive_bayes.html)  
 
