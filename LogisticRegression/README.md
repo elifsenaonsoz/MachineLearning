@@ -62,4 +62,3 @@ Scikit-learn modeli genel olarak hız ve kullanım kolaylığı açısından ava
 
 - **Veri Seti Kaynağı:** [UCI Makine Öğrenmesi Deposu - Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing)  
 - **Scikit-learn Logistic Regression Dokümantasyonu:** [Scikit-learn LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
-
