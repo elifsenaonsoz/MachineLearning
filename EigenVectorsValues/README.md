@@ -3,6 +3,7 @@ Matris Manipülasyonu Nedir?
 Matris manipülasyonu, verileri matrisler aracılığıyla temsil edip bu matrisler üzerinde çeşitli işlemler yapmaktır. Bu işlemler arasında transpoz alma, matris çarpımı, ters alma gibi işlemler yer alır. Makine öğrenmesinde veriler genellikle sayısal biçimde matrislere aktarılır ve bu matrisler üzerinden hesaplamalar yapılır. Özellikle model eğitimi, hata hesaplama ya da veri dönüştürme gibi işlemlerde matris manipülasyonu kaçınılmazdır.
 
 Özdeğer (Eigenvalue) ve Özvektör (Eigenvector) Nedir?
+
 Bir matrisin özdeğerleri, o matrisin bazı özel vektörler üzerindeki etkisini tanımlar. Bu özel vektörlere de özvektör denir. Matematiksel olarak, bir A matrisinin özdeğer ve özvektörleri 
 𝐴
 𝑥
