@@ -1,4 +1,4 @@
-# 📈 Linear Regression - YZM212 4. Laboratuvar Çalışması
+# Linear Regression - YZM212 4. Laboratuvar Çalışması
 
 Bu çalışmada, iş deneyimi (yıl) ile maaş arasındaki doğrusal ilişkiyi modellemek amacıyla **Linear Regression** algoritması iki farklı şekilde uygulanmıştır:
 
@@ -7,7 +7,7 @@ Bu çalışmada, iş deneyimi (yıl) ile maaş arasındaki doğrusal ilişkiyi m
 
 ---
 
-## 📊 Kullanılan Veri Seti
+## Kullanılan Veri Seti
 
 - **Kaynak:** [Kaggle - Simple Linear Regression Salary Data](https://www.kaggle.com/datasets?tags=13405-Linear+Regression&utm_source=chatgpt.com)
 - **Özellikler:**
@@ -17,23 +17,23 @@ Bu çalışmada, iş deneyimi (yıl) ile maaş arasındaki doğrusal ilişkiyi m
 
 ---
 
-## 🧮 Teorik Bilgi
+##  Teorik Bilgi
 
-### 🔹 Linear Regression
+### Linear Regression
 Amaç, veri noktaları arasında en uygun doğrusal ilişkiyi (doğruyu) bulmaktır. Genel formülü:
 
 \[
 \hat{y} = \theta_0 + \theta_1 x
 \]
 
-### 🔹 Least Squares Estimation (LSE)
+### Least Squares Estimation (LSE)
 Kapalı formül ile en uygun ağırlıklar şu şekilde hesaplanır:
 
 \[
 \theta = (X^T X)^{-1} X^T y
 \]
 
-### 🔹 Gradient Descent
+### Gradient Descent
 Amaç, hata fonksiyonunu minimize edecek ağırlıkları iteratif olarak bulmaktır.
 
 \[
@@ -42,7 +42,7 @@ Amaç, hata fonksiyonunu minimize edecek ağırlıkları iteratif olarak bulmakt
 
 ---
 
-## ⚙️ Kullanılan Kütüphaneler
+##  Kullanılan Kütüphaneler
 
 ```bash
 numpy
