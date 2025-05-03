@@ -1,10 +1,9 @@
 # 📈 Linear Regression - YZM212 4. Laboratuvar Çalışması
 
-Bu çalışmada, iş deneyimi (yıl) ile maaş arasındaki doğrusal ilişkiyi modellemek amacıyla **Linear Regression** algoritması üç farklı şekilde uygulanmıştır:
+Bu çalışmada, iş deneyimi (yıl) ile maaş arasındaki doğrusal ilişkiyi modellemek amacıyla **Linear Regression** algoritması iki farklı şekilde uygulanmıştır:
 
 1. **Least Squares Estimation (LSE)** yöntemiyle manuel çözüm
 2. **Gradient Descent** algoritması ile parametre güncelleme
-3. **Scikit-learn kütüphanesi** kullanılarak hazır modelle çözüm
 
 ---
 
