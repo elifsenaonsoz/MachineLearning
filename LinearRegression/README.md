@@ -16,29 +16,22 @@ Bu çalışmada, iş deneyimi (yıl) ile maaş arasındaki doğrusal ilişkiyi m
 - **Format:** CSV
 
 ---
-
 ##  Teorik Bilgi
 
 ### Linear Regression
 Amaç, veri noktaları arasında en uygun doğrusal ilişkiyi (doğruyu) bulmaktır. Genel formülü:
 
-\[
-\hat{y} = \theta_0 + \theta_1 x
-\]
+    y_hat = θ₀ + θ₁ * x
 
 ### Least Squares Estimation (LSE)
 Kapalı formül ile en uygun ağırlıklar şu şekilde hesaplanır:
 
-\[
-\theta = (X^T X)^{-1} X^T y
-\]
+    θ = (Xᵀ * X)⁻¹ * Xᵀ * y
 
 ### Gradient Descent
 Amaç, hata fonksiyonunu minimize edecek ağırlıkları iteratif olarak bulmaktır.
 
-\[
-\theta_j := \theta_j - \alpha \cdot \frac{1}{m} \sum (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}
-\]
+    θ_j := θ_j - α * (1/m) * ∑(h_θ(xᶦ) - yᶦ) * x_jᶦ
 
 ---
 
