@@ -1,10 +1,10 @@
-#  Wine Quality Prediction - Neural Network from Scratch
+# Wine Quality Prediction - Neural Network from Scratch
 
 Bu projede, kırmızı şarapların kimyasal özelliklerinden yola çıkarak kalite skorunu tahmin etmek amacıyla sıfırdan yazılmış bir **yapay sinir ağı (Neural Network)** modeli geliştirilmiştir. Proje, **YZM212 Makine Öğrenmesi** dersi kapsamında 6. laboratuvar ödevi olarak hazırlanmıştır.
 
 ---
 
-##  Veri Seti
+## Veri Seti
 
 - **Kaynak:** [UCI Wine Quality Dataset](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
 - **Tür:** Regresyon
@@ -24,7 +24,7 @@ Bu projede, kırmızı şarapların kimyasal özelliklerinden yola çıkarak kal
 
 ---
 
-##  Eğitim Performansı
+## Eğitim Performansı
 
 | Metrik | Değer |
 |--------|--------|
@@ -36,7 +36,7 @@ Bu projede, kırmızı şarapların kimyasal özelliklerinden yola çıkarak kal
 
 ---
 
-##  İlk 10 Tahmin Sonucu
+## İlk 10 Tahmin Sonucu
 
 | Gerçek (quality) | Tahmin |
 |------------------|--------|
@@ -55,7 +55,7 @@ Bu projede, kırmızı şarapların kimyasal özelliklerinden yola çıkarak kal
 
 ---
 
-##  Loss Grafiği
+## Loss Grafiği
 
 Eğitim süresince loss değerinin epoch'lara göre değişimi:
 
@@ -67,3 +67,21 @@ Eğitim süresince loss değerinin epoch'lara göre değişimi:
 
 ```bash
 pip install -r requirements.txt
+```
+
+---
+
+## Kullanım
+
+```bash
+python nn_wine.py
+```
+
+> Kod çalıştırıldığında hem terminal çıktısı hem de `loss_plot.png` kaydedilecektir.
+
+
+## Hazırlayan
+
+**Elif Sena Önsöz**  
+YZM212 - Yapay Zeka ve Veri Mühendisliği  
+Ankara Üniversitesi
