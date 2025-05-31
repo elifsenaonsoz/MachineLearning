@@ -63,7 +63,7 @@ Eğitim süresince loss değerinin epoch'lara göre değişimi:
 
 ---
 
-## ⚙ Gereksinimler
+##  Gereksinimler
 
 ```bash
 pip install -r requirements.txt
